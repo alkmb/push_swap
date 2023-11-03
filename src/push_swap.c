@@ -74,9 +74,9 @@ int	main(int argc, char **argv)
 	nums_in_b = (int *)malloc(sizeof(int));
 	check_params(argc, argv, nums_in_a, nums_in_b);
 	set_nums(nums_in_a, nums_in_b, argc);
-	stack_a = (int *)malloc(sizeof(long) * stack_size(argc, argv));
-	stack_b = (int *)malloc(sizeof(long) * stack_size(argc, argv));
-	if ((separating_input_nums(stack_a, nums_in_a, argv) == -1) 
+	stack_a = (int *)malloc(sizeof(int) * stack_size(argc, argv));
+	stack_b = (int *)malloc(sizeof(int) * stack_size(argc, argv));
+	if ((check_input_nums(stack_a, nums_in_a, argv) == -1) 
 		|| (check_sorted(stack_a, nums_in_a) == 0))
 		free_stacks(stack_a, stack_b, nums_in_a, nums_in_b);
 	if ((nums_in_a[1] == 2) && (stack_a[0] > stack_a[1]))

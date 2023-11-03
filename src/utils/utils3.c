@@ -82,7 +82,7 @@ int	std_input(int *stack_a, int *nums_in_a, char **argv)
 	i = 0;
 	while (i < nums_in_a[1])
 	{
-		if (only_num(argv[i + 1]) == 1)
+		if (neg_num(argv[i + 1]) == 1)
 			stack_a[i] = ft_atoi(argv[i + 1]);
 		else
 		{
@@ -94,7 +94,7 @@ int	std_input(int *stack_a, int *nums_in_a, char **argv)
 	return (0);
 }
 
-int	separating_input_nums(int *stack_a, int *nums_in_a, char **argv)
+int	check_input_nums(int *stack_a, int *nums_in_a, char **argv)
 {
 	char	**nums_list;
 

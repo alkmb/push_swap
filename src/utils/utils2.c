@@ -29,7 +29,7 @@ int	ft_isdigit(int i)
 	return (0);
 }
 
-int	only_num(char *num)
+int	neg_num(char *num)
 {
 	int	i;
 	int	minus;

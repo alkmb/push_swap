@@ -37,7 +37,7 @@ void	sort_chunk(int *stack, int *stack_size)
 	}
 }
 
-void	swap_a_first(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
+void	fill_copys(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ void	swap_a_first(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
 	}
 }
 
-void	swap_a_second(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
+void	to_ogstack(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
 {
 	int	i;
 	int	j;
@@ -70,7 +70,7 @@ void	swap_a_second(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
 	}
 }
 
-void	swap_a_third(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
+void	bitshift_sort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
 {
 	int	max_num;
 	int	max_bits;
@@ -106,10 +106,10 @@ void	bigsort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
 
 	copy = (int *)malloc(nums_in_a[0] * sizeof(int));
 	copy_swap_a = (int *)malloc(nums_in_a[0] * sizeof(int));
-	swap_a_first(copy, copy_swap_a, stack_a, nums_in_a);
+	fill_copys(copy, copy_swap_a, stack_a, nums_in_a);
 	sort_chunk(copy, nums_in_a);
-	swap_a_second(copy, copy_swap_a, stack_a, nums_in_a);
+	to_ogstack(copy, copy_swap_a, stack_a, nums_in_a);
 	free(copy);
 	free(copy_swap_a);
-	swap_a_third(stack_a, stack_b, nums_in_a, nums_in_b);
+	bitshift_sort(stack_a, stack_b, nums_in_a, nums_in_b);
 }
