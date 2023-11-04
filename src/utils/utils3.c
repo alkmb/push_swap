@@ -6,7 +6,7 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 02:00:14 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 02:51:50 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/04 06:22:58 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,11 @@ int	num_input(int *stack_a, int *nums_in_a, char **argv, char **nums_list)
 	while (i < nums_in_a[0])
 	{
 		stack_a[i] = ft_atoi(nums_list[i]);
+		if ((stack_a[i] > 2147483647) || (stack_a[i] < -2147483647))
+		{
+			write(1, "Error\n", 6);
+			return (-1);
+		}
 		i++;
 	}
 	free_str(nums_list);
@@ -110,8 +115,6 @@ int	check_input_nums(int *stack_a, int *nums_in_a, char **argv)
 			return (-1);
 	}
 	if (rep_nums(stack_a, nums_in_a[1]) == -1)
-		return (-1);
-	if (num_lim(stack_a, nums_in_a[1] == -1))
 		return (-1);
 	return (0);
 }

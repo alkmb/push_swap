@@ -6,7 +6,7 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 01:49:45 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 02:51:38 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/04 05:55:16 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,23 +47,6 @@ int	neg_num(char *num)
 	if (minus > 1)
 		return (0);
 	return (1);
-}
-
-int	num_lim(int *stack_a, int nums_in_a)
-{
-	int	i;
-
-	i = 0;
-	while (i < nums_in_a)
-	{
-		if ((stack_a[i] > 2147483647) || (stack_a[i] < -2147483647))
-		{
-			write(1, "Error\n", 6);
-			return (-1);
-		}
-		i++;
-	}
-	return (0);
 }
 
 int	check_sorted(int *stack_a, int *nums_in_a)

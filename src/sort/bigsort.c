@@ -6,7 +6,7 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 23:23:45 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 02:53:13 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/04 06:10:05 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	to_ogstack(int *copy, int *copy_swap_a, int *stack_a, int *nums_in_a)
 	}
 }
 
-void	bitshift_sort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
+void	bitshift(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
 {
 	int	max_num;
 	int	max_bits;
@@ -112,5 +112,5 @@ void	bigsort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
 	to_ogstack(copy, copy_swap_a, stack_a, nums_in_a);
 	free(copy);
 	free(copy_swap_a);
-	bitshift_sort(stack_a, stack_b, nums_in_a, nums_in_b);
+	bitshift(stack_a, stack_b, nums_in_a, nums_in_b);
 }
