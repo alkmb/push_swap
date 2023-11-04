@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akambou <akambou@student.42barcelona.com>  +#+  +:+       +#+        */
+/*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:36:43 by akambou           #+#    #+#             */
-/*   Updated: 2023/10/30 02:46:29 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/04 02:52:02 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	set_nums(int *nums_in_a, int *nums_in_b, int argc);
 void	params(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b);
 int	    stack_size(int argc, char **argv);
 int	    rep_nums(int *stack_a, int nums_in_a);
-int     main(int argc, char *argv[]);
+void	print_stacks(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b);
 //------------------SORT------------------------------------------------------
 void	minisort(int *stack_a, int *nums_in_a);
 void	sort_chunk(int *stack, int *stack_size);

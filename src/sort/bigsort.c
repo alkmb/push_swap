@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bigsort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akambou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 23:23:45 by akambou           #+#    #+#             */
-/*   Updated: 2023/10/30 02:47:00 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/04 02:53:13 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ void	bitshift_sort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
 				push_b(stack_a, stack_b, nums_in_a, nums_in_b);
 			++loop[1];
 		}
+		print_stacks(stack_a, stack_b, nums_in_a, nums_in_b);
 		while (*nums_in_b != 0)
 			push_a(stack_a, stack_b, nums_in_a, nums_in_b);
 		++loop[0];
