@@ -6,35 +6,11 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 20:09:22 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 02:55:54 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:42:50 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void	print_stacks(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	printf("------------------------------------------------------------\n");
-	printf("Stack_A\n\n");
-	while (i < nums_in_a[0])
-	{
-		printf("%d\n", stack_a[i]);
-		i++;
-	}
-	printf("-------------\n\n");
-	printf("Stack_B\n\n");
-	while (j < nums_in_b[0])
-	{
-		printf("%d\n", stack_b[j]);
-		j++;
-	}
-	printf("------------------------------------------------------------\n");
-}
 
 void	free_exit(int *nums_in_a, int *nums_in_b)
 {
@@ -111,7 +87,5 @@ int	main(int argc, char **argv)
 		midsort(stack_a, stack_b, nums_in_a, nums_in_b);
 	else
 		bigsort(stack_a, stack_b, nums_in_a, nums_in_b);
-	print_stacks(stack_a, stack_b, nums_in_a, nums_in_b);
 	free_stacks(stack_a, stack_b, nums_in_a, nums_in_b);
-	return (0);
 }

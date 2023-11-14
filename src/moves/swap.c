@@ -6,10 +6,9 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:02:12 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 02:53:02 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:14:55 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes/push_swap.h"
 
@@ -43,7 +42,8 @@ void	swap_b(int *stack_b, int *nums_in_b)
 	write(1, "sb\n", 3);
 }
 
-void	swap_both(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
+void	swap_both(int *stack_a, int *stack_b, \
+int *nums_in_a, int *nums_in_b)
 {
 	int	*temp;
 

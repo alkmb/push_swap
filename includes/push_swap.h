@@ -6,7 +6,7 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:36:43 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 06:15:10 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:10:53 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stddef.h>
-
 
 //-------------------MOVEMENTS------------------------------------------------
 void	push_a(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b);
@@ -44,6 +43,7 @@ void	set_nums(int *nums_in_a, int *nums_in_b, int argc);
 void	params(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b);
 int		stack_size(int argc, char **argv);
 int		rep_nums(int *stack_a, int nums_in_a);
+int		out_of_range(char *str_num);
 void	print_stacks(int *stack_a, int *stack_b, int *nums_in_a, \
 int		*nums_in_b);
 //------------------SORT------------------------------------------------------
@@ -61,6 +61,7 @@ void	midsort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b);
 void	bigsort(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b);
 //------------------UTILS-----------------------------------------------------
 void	ft_realloc(int *ptr, int startsize, int newsize);
+void	set_nums(int *nums_in_a, int *nums_in_b, int argc);
 char	**ft_split(const char *str, char c);
 int		ft_isdigit(int i);
 int		neg_num(char *num);

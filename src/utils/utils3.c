@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 02:00:14 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 06:22:58 by akambou          ###   ########.fr       */
+/*   Created: 2023/11/14 10:42:27 by akambou           #+#    #+#             */
+/*   Updated: 2023/11/14 10:45:03 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,6 @@ int	num_input(int *stack_a, int *nums_in_a, char **argv, char **nums_list)
 	while (i < nums_in_a[0])
 	{
 		stack_a[i] = ft_atoi(nums_list[i]);
-		if ((stack_a[i] > 2147483647) || (stack_a[i] < -2147483647))
-		{
-			write(1, "Error\n", 6);
-			return (-1);
-		}
 		i++;
 	}
 	free_str(nums_list);

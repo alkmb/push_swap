@@ -6,7 +6,7 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 23:23:45 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 06:10:05 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:39:21 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ void	bitshift(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
 				push_b(stack_a, stack_b, nums_in_a, nums_in_b);
 			++loop[1];
 		}
-		print_stacks(stack_a, stack_b, nums_in_a, nums_in_b);
 		while (*nums_in_b != 0)
 			push_a(stack_a, stack_b, nums_in_a, nums_in_b);
 		++loop[0];

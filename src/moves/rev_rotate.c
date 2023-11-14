@@ -6,7 +6,7 @@
 /*   By: akambou <akambou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:01:31 by akambou           #+#    #+#             */
-/*   Updated: 2023/11/04 02:55:30 by akambou          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:06:06 by akambou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	rev_rotate_b(int *stack_b, int *nums_in_b)
 	write(1, "rrb\n", 4);
 }
 
-void	rev_rotate_both(int *stack_a, int *stack_b, int *nums_in_a, int *nums_in_b)
+void	rev_rotate_both(int *stack_a, int *stack_b, \
+int *nums_in_a, int *nums_in_b)
 {
 	int	i;
 	int	*temp;
