@@ -13,39 +13,33 @@
 NAME = push_swap
 
 CC = gcc
+RM = rm -rf
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -o$(INCL)
 
-SOURCE  =	$(wildcard src/moves/*.c) \
-			$(wildcard src/sort/*.c) \
-			$(wildcard src/utils/*.c) \
-			src/push_swap.c
+INCL = includes/push_swap.h
+OBJ_DIR = obj/
+OBJS = $(SRCS:%.c=$(OBJ_DIR)%.o)
+SRCS = $(wildcard src/moves/*.c src/sort/*.c src/utils/*.c src/*.c)
 
-OBJ = $(patsubst src/%.c,obj/%.o,$(SOURCE))
-
-$(NAME): $(OBJ)
-	@echo "🔨 Building $(NAME)..."
-	@$(CC) $(FLAGS) $(OBJ) -Iincludes -o $(NAME)
-	@echo "✅ $(NAME) compiled successfully."
-
-obj/%.o : src/%.c
+$(OBJ_DIR)%.o: %.c
 	@mkdir -p $(@D)
-	@echo "🔨 Compiling $<..."
-	@$(CC) $(FLAGS) -c $< -o $@
-	@echo "✅ $< compiled successfully."
+	@printf "\033[0;33m\rCompiling -> $< ✅                        \033[0m"
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo -e "\033[0;32mPush Swap created 📚\033[0m"
+
 clean:
-	@echo "🧹 Cleaning object files..."
-	@rm -rf obj
-	@echo "✅ Object files cleaned successfully."
+	@$(RM) $(OBJ) $(OBJ_DIR)
+	@echo -e "\033[0;31mCleaned objects 🧹\033[0m"
 
 fclean: clean
-	@echo "🧹 Cleaning $(NAME)..."
-	@rm -rf $(NAME)
-	@echo "✅ $(NAME) cleaned successfully."
-
+	@$(RM) $(NAME) $(OBJ_DIR) $(OBJ)
+	@echo -e "\033[0;31mCleaned libft 🧹\033[0m"
 re: fclean all
 
 .PHONY: all clean fclean re
